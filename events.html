@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="image" src="bong.jpg" style="width: 150px;height: 150px"><br/>
+    <p>click button below to move the image to the right</p>
+    <input type="button" value="clickMe" onclick="move()" />
+</form>
+<script>
+    let oject=null;
+    function init() {
+        oject=document.getElementById('image');
+        oject.style.position='relative';
+        oject.style.left='0px';
+    }
+    function move() {
+        oject.style.left=parseInt(oject.style.left)+10+'px';
+    }
+    window.onload=init;
+</script>
+</body>
+</html>
